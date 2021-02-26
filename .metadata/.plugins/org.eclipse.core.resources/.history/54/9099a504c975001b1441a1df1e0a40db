@@ -1,0 +1,10 @@
+package com.service.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("BOOK-SERVICE")
+public interface BookFeignClient {
+
+	
+	Book getBook();
+}

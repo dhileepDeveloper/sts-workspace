@@ -1,0 +1,62 @@
+package com.bookservice.client;
+
+import java.net.URI;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
+
+@SpringBootTest
+class BookServiceClientApplicationTests {
+
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@Test
+	public void getBook()
+	{
+		String ingredientID = "1";
+		Book book = restTemplate.getForObject("http://localhost:8081/book/{id}", Book.class,ingredientID);
+		System.out.println("Book is " + book);
+	}
+	
+	@Test
+	public void getBookWithMap()
+	{
+		String ingredientID = "1";
+		Map<String,String> map = new HashMap<String,String>();
+		map.put("id", ingredientID);
+		Book book = restTemplate.getForObject("http://localhost:8081/book/{id}", Book.class,map);
+		System.out.println("Book is " + book);
+	}
+	
+	@Test
+	public void getBookWithURI()
+	{
+		String ingredientID = "4";
+		Map<String,String> map = new HashMap<String,String>();
+		map.put("id", ingredientID);
+		URI uri = UriComponentsBuilder.fromHttpUrl("http://localhost:8081/book/{id}").build(map);
+		Book book = restTemplate.getForObject("http://localhost:8081/book/{id}", Book.class,map);
+		System.out.println("Book is " + book);
+	}
+	
+	@Test
+	public void getBookEntityWithURI()
+	{
+		String ingredientID = "4";
+		Map<String,String> map = new HashMap<String,String>();
+		map.put("id", ingredientID);
+		URI uri = UriComponentsBuilder.fromHttpUrl("http://localhost:8081/book/{id}").build(map);
+		ResponseEntity<Book> book = restTemplate.getForEntity("http://localhost:8081/book/{id}", Book.class,map);
+		System.out.println("Book is " + book.getBody());
+		System.out.println("Status is " + book.getStatusCode());
+		System.out.println("Header is " + new Date(book.getHeaders().getDate()));
+	}
+}

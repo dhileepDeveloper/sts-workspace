@@ -1,0 +1,5 @@
+package com.practise.repo;
+
+public class BookRepository {
+
+}

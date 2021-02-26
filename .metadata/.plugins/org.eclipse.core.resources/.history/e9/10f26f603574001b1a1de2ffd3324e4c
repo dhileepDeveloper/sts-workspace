@@ -1,0 +1,15 @@
+package com.bookservice.client.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+public class BookClient {
+
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	public void getBooks()
+	{
+		
+	}
+}

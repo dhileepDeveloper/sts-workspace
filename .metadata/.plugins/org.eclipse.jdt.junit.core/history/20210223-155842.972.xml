@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookServiceClientApplicationTests.getBookLoadBalanced" project="Book-Service-Client" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.bookservice.client.BookServiceClientApplicationTests" time="0.812" displayname="BookServiceClientApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.bookservice.client.BookServiceClientApplicationTests]">
+    <testcase name="getBookLoadBalanced" classname="com.bookservice.client.BookServiceClientApplicationTests" time="0.812" displayname="getBookLoadBalanced()" uniqueid="[engine:junit-jupiter]/[class:com.bookservice.client.BookServiceClientApplicationTests]/[method:getBookLoadBalanced()]"/>
+  </testsuite>
+</testrun>

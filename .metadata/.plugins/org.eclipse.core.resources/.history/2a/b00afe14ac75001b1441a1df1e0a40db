@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: Book-Service
+eureka:
+ instance:
+   hostname: localhost
+
+---
+spring:
+  profiles: book1
+  datasource:
+    password: ''
+    url: jdbc:mysql://localhost:3306/microDb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8081
+
+
+
+---
+spring:
+  profiles: book2
+  datasource:
+    password: ''
+    url: jdbc:mysql://localhost:3306/microDb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8082
+
+eureka:
+ instance:
+   hostname: localhost
+ client:
+   service-url: 
+     defaultZone: http://localhost:8761/eureka/
+                  http://localhost:8762/eureka/
+  

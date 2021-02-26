@@ -1,0 +1,8 @@
+eureka:
+  client:
+    service-url:
+	  defaultZone: http://${other.eureka.hostname}:${other.eureka.port}/eureka
+      
+spring:
+ profiles: eureka1
+ 

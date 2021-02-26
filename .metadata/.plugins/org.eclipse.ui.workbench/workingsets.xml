@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1611728352148_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1611728352166_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1613560742132_3" label="spring-cloud-config" name="spring-cloud-config">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-cloud-config" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/server" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/client" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1611728354743_2" label="Window Working Set" name="Aggregate for window 1611728354743"/>
+</workingSetManager>
